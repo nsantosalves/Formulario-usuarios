@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <center>
+<head>
+    <title>Atividade 1</title>
+</head>
+<body>
+    <form>
+    
+        <h1>Formulário</h1>
+
+        <label><strong>Nome completo: </strong></label>
+        <input type="text" id="nome" required>
+        
+        <label><strong>Digite sua idade: </strong></label>
+        <input type="number" id="idade" required>
+
+        <label><strong>Digite seu email: </strong></label>
+        <input type="email" id="email" required><br>
+    <br>
+    </form>
+
+    <button onclick="salvar()"><strong>Salvar dados</strong></button>
+    
+    
+    <script>
+        let dados = [];
+
+        function salvar() {
+            let nome = document.getElementById('nome').value;
+            let idade = document.getElementById('idade').value;
+            let email = document.getElementById('email').value;
+
+            dados.push({nome, idade, email});
+
+            let tabela = document.getElementById('Minha-tabela');
+            tabela.innerHTML +="<tr><td>" + nome + "</td><td>" + idade + "</td><td>" + email + "</td></tr>";
+        }
+        </script><br>
+
+        <br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="Minha-tabela"></tbody>
+    </table>
+    
+</body>
+</center>
+</html>
