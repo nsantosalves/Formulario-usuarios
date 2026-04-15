@@ -1,44 +1,102 @@
 <!DOCTYPE html>
-<html>
-    <center>
-<head>
-    <title>Atividade 1</title>
-</head>
-<body>
-    <form>
-    
-        <h1>Formulário</h1>
 
+<html>
+    <head>
+        <title>Cadastro</title>
+
+    <style>
+        body{
+            background-color: #e2e2e2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color:rgb(151, 53, 53);
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size:50px;
+        }
+
+        form {
+            color:rgb(66, 2, 2); 
+            font-size: 20px;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 15px 8px rgba(155, 50, 50, 0.30);
+
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        button{
+            color:white; 
+            background-color: brown;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        button:hover {
+            background-color: #cc6d6d;
+        }
+
+        table{
+            background-color:rgb(255, 255, 255);
+            font-size: 25px;
+            border-radius: 10px;
+            width: 50%;
+        }
+
+         th {
+            background-color: #6d2f2f;
+            color: white;
+            padding: 12px;
+        }
+
+    </style>
+    </head>
+
+<body>
+
+    <h1>Formulário para cadastro</h1>
+
+    <form>
         <label><strong>Nome completo: </strong></label>
-        <input type="text" id="nome" required>
+        <input type="text" id="nome" placeholder="Digite seu nome "required>
         
         <label><strong>Digite sua idade: </strong></label>
-        <input type="number" id="idade" required>
+        <input type="number" id="idade" placeholder="Digite sua idade" required>
 
         <label><strong>Digite seu email: </strong></label>
-        <input type="email" id="email" required><br>
-    <br>
-    </form>
+        <input type="email" id="email" placeholder="Digite seu email" required>
+        <br><br>
 
-    <button onclick="salvar()"><strong>Salvar dados</strong></button>
-    
+        <button type="button" onclick="salvar()"><strong>Salvar dados</strong></button>
+    </form>
     
     <script>
         let dados = [];
 
-        function salvar() {
-            let nome = document.getElementById('nome').value;
-            let idade = document.getElementById('idade').value;
-            let email = document.getElementById('email').value;
+        const salvar = () => {
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const email = document.getElementById('email').value;
 
             dados.push({nome, idade, email});
 
-            let tabela = document.getElementById('Minha-tabela');
+            const tabela = document.getElementById('Minha-tabela');
             tabela.innerHTML +="<tr><td>" + nome + "</td><td>" + idade + "</td><td>" + email + "</td></tr>";
         }
-        </script><br>
-
-        <br>
+    </script>
+    <br><br>
 
     <table border="1">
         <thead>
@@ -52,5 +110,4 @@
     </table>
     
 </body>
-</center>
 </html>
