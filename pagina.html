@@ -1,69 +1,11 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
     <head>
-        <title>Cadastro</title>
-
-    <style>
-        body{
-            background-color: #e2e2e2;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            color:rgb(151, 53, 53);
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size:50px;
-        }
-
-        form {
-            color:rgb(66, 2, 2); 
-            font-size: 20px;
-            background-color: rgb(255, 255, 255);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 15px 8px rgba(155, 50, 50, 0.30);
-
-        }
-
-        input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 15px;
-        }
-
-        button{
-            color:white; 
-            background-color: brown;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        
-        button:hover {
-            background-color: #cc6d6d;
-        }
-
-        table{
-            background-color:rgb(255, 255, 255);
-            font-size: 25px;
-            border-radius: 10px;
-            width: 50%;
-        }
-
-         th {
-            background-color: #6d2f2f;
-            color: white;
-            padding: 12px;
-        }
-
-    </style>
-    </head>
-
+    <meta charset="UTF-8">
+    <title>Portal de Cadastro | Sistema de Usuários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <h1>Formulário para cadastro</h1>
@@ -81,24 +23,10 @@
 
         <button type="button" onclick="salvar()"><strong>Salvar dados</strong></button>
     </form>
-    
-    <script>
-        let dados = [];
 
-        const salvar = () => {
-            const nome = document.getElementById('nome').value;
-            const idade = document.getElementById('idade').value;
-            const email = document.getElementById('email').value;
-
-            dados.push({nome, idade, email});
-
-            const tabela = document.getElementById('Minha-tabela');
-            tabela.innerHTML +="<tr><td>" + nome + "</td><td>" + idade + "</td><td>" + email + "</td></tr>";
-        }
-    </script>
     <br><br>
 
-    <table border="1">
+    <table border="5">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -108,6 +36,17 @@
         </thead>
         <tbody id="Minha-tabela"></tbody>
     </table>
-    
+
+     <footer>
+        <p>Desenvolvido por <strong>Nayara Santos</strong></p>
+        <p>2026 - Todos os direitos reservados</p>
+        <a href="https://github.com/nsantosalves" target="_blank">GitHub</a>
+    </footer>
+
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
