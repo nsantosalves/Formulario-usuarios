@@ -4,13 +4,13 @@
     <head>
     <meta charset="UTF-8">
     <title>Portal de Cadastro | Sistema de Usuários</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
     <h1>Formulário para cadastro</h1>
 
-    <form>
+    <form onsubmit="salvar(event)">
         <label><strong>Nome completo: </strong></label>
         <input type="text" id="nome" placeholder="Digite seu nome "required>
         
@@ -21,7 +21,7 @@
         <input type="email" id="email" placeholder="Digite seu email" required>
         <br><br>
 
-        <button type="button" onclick="salvar()"><strong>Salvar dados</strong></button>
+        <button type="submit" onclick="salvar()"><strong>Salvar dados</strong></button>
     </form>
 
     <br><br>
@@ -32,10 +32,20 @@
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Email</th>
+                <th>Ações</th>
             </tr>
         </thead>
-        <tbody id="Minha-tabela"></tbody>
+        <tbody id="Minha-tabela">
+
+        </tbody>
     </table>
+    <br>
+
+<img src="https://picsum.photos/id/10/300/200"><br>
+<img src="https://picsum.photos/300/200?blur=3&random=2"><br>
+<img src="https://picsum.photos/300/200?grayscale&random=3"><br>
+<img src="https://picsum.photos/300/200?random=4"><br>
+<img src="https://picsum.photos/300/200?grayscale&blur=2&random=5"><br>
 
      <footer>
         <p>Desenvolvido por <strong>Nayara Santos</strong></p>
@@ -43,10 +53,7 @@
         <a href="https://github.com/nsantosalves" target="_blank">GitHub</a>
     </footer>
 
-        </p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>

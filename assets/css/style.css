@@ -20,7 +20,7 @@ form {
     background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 15px 8px rgba(155, 50, 50, 0.30);
+    box-shadow: 0 15px 8px rgba(155, 50, 50, 0.25);
     }
 
 input {
@@ -32,14 +32,14 @@ input {
 
 button{
     color:white; 
-    background-color: brown;
+    background-color: rgb(99, 20, 20);
     border-radius: 20px;
     cursor: pointer;
     font-size: 20px;
     }
         
 button:hover {
-    background-color: #cc6d6d;
+    background-color: #cca4a4;
     }
 
 table{
